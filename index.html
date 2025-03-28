@@ -4,8 +4,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" type="image/x-icon" href="img/logo_small.png" />
-
+  <link rel="icon" type="image/x-icon" href="./assets/icons/favicon.ico" />
+  
   <title>Book Store</title>
 
   <link rel="stylesheet" href="./styles/standard.css">
@@ -17,19 +17,30 @@
   <script src="./script.js" defer></script>
 </head>
 
-<body>
+<body onload="init()">
   <header>
     <img src="./assets/icons/Buch_Lesen_1484571763.png" alt="DABookstore Icon" class="headerIcon">
      DABookstore - get your book here
   </header>
   
   <main>
+    <div id="bookstoreMain" class="bookstore">
+      <div class="bookCard">
+        <div>Titel</div>
+        <div>Buchbild</div>
+        <div>Preis Likes<br>
+          Autor<br>
+          Erscheinungsjahr<br>
+          Genre
+        </div>
+        <div>Kommentare</div>        
+      </div>
+    </div>
   </main>
 
-  <section>
-  </section>
 
   <footer>
+    &copy; 2025 Stefan Heller
   </footer>
 </body>
 
