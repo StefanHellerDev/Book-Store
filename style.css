@@ -1,5 +1,5 @@
 body {
-  font-family: "Viga", sans-serif;
+  font-family: "PT Sans", sans-serif;
   color: whitesmoke;
   background-color: black;
 }
@@ -34,8 +34,31 @@ footer {
 }
 
 .bookCard {
-  background-color: rgb(47, 65, 59);
+  background-color: #0d3240;
   border-radius: 16px;
   padding: 10px;
   margin-top: 16px;
+}
+
+.bookCardTitle {
+  display: flex;
+  justify-content: center;
+}
+
+.bookCardPic {
+  display: flex;
+  justify-content: center;
+}
+
+.bookCardIcon {
+  width: 80px;
+}
+
+.priceLikesContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.bookPrice {
+  color: red;
 }
