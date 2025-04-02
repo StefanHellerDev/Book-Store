@@ -62,3 +62,6 @@ footer {
 .bookPrice {
   color: red;
 }
+.priceLikesContainer img {
+  height: 24px;
+}
