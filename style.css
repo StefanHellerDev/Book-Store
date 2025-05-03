@@ -54,7 +54,8 @@ footer {
 .bookCard {
   background-color: #0d3240;
   border-radius: 16px;
-  padding: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   margin-top: 8px;
   margin-bottom: 8px;
   width: 240px;
@@ -68,6 +69,8 @@ footer {
 .bookCardPic {
   display: flex;
   justify-content: center;
+  border-bottom: solid;
+  border-bottom-color: rgb(107, 116, 241);
 }
 
 .bookCardIcon {
@@ -77,6 +80,8 @@ footer {
 .priceLikesContainer {
   display: flex;
   justify-content: space-between;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .bookPrice {
@@ -94,12 +99,26 @@ footer {
 
 .authorYearGenreContainer {
   font-size: 12px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .commentSection {
   font-weight: bold;
   font-size: 14px;
-  /* overflow: auto; */
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.commentSection input {
+  margin-top: 4px;
+  width: 90%;
+  font-size: 12px;
+}
+
+.commentSection img {
+  height: 14px;
+  filter: invert(100%);
+  margin-top: 4px;
 }
 
 .comments {
@@ -113,4 +132,3 @@ footer {
 .comments td {
   vertical-align: top;
 }
-

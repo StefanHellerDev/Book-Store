@@ -61,6 +61,8 @@ function bookTemplate(bookstore, bookIndex, bookPrice) {
             <div class="comments">
               <table id="bookComments${bookIndex}"></table>
             </div>
+            <input id="commentInput${bookIndex}" type="text" placeholder="Bitte Kommentar eingeben...">
+            <img src="./assets/icons/115704_paperplane_paper plane_icon.png" alt="paper plane"  onclick="addComment(${bookIndex})">
           </div>
         </div>`;
 
@@ -88,6 +90,7 @@ function toggleHeart(bookIndex) {
 
 function commentsTemplate(bookIndex) {
   let comments = document.getElementById("bookComments" + bookIndex);
+  comments.innerHTML = "";
 
   for (
     let commentsIndex = 0;
@@ -101,4 +104,20 @@ function commentsTemplate(bookIndex) {
       <td>${books[bookIndex].comments[commentsIndex].comment}</td>
     </tr>`;
   }
+}
+
+function addComment(bookIndex) {
+  let commentInputRef = document.getElementById("commentInput" + bookIndex);
+  let commentInput = commentInputRef.value;
+  
+  if (commentInput == "") {
+    return;
+  }
+
+  books[bookIndex].comments.unshift({
+    "name": "Gast",
+    "comment": commentInput,
+  });
+  commentsTemplate(bookIndex);
+  commentInputRef.value = "";
 }
