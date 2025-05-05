@@ -41,7 +41,6 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* padding: 32px;   */
 }
 
 .bookstore {
@@ -64,6 +63,9 @@ footer {
 .bookCardTitle {
   display: flex;
   justify-content: center;
+  border-bottom: solid;
+  border-bottom-color: rgb(107, 116, 241);
+  padding-bottom: 8px;
 }
 
 .bookCardPic {
@@ -80,8 +82,7 @@ footer {
 .priceLikesContainer {
   display: flex;
   justify-content: space-between;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding: 10px;  
 }
 
 .bookPrice {
@@ -101,24 +102,30 @@ footer {
   font-size: 12px;
   padding-left: 10px;
   padding-right: 10px;
+  border-bottom: solid;
+  border-bottom-color: rgb(107, 116, 241);
+  padding-bottom: 8px;
 }
 
 .commentSection {
   font-weight: bold;
   font-size: 14px;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding: 10px;
 }
+
 .commentSection input {
-  margin-top: 4px;
-  width: 90%;
+  margin-top: 8px;
+  width: 88%;
   font-size: 12px;
+  border-bottom: solid;
+  border-bottom-color: rgb(107, 116, 241);
 }
 
 .commentSection img {
   height: 14px;
   filter: invert(100%);
-  margin-top: 4px;
+  margin-top: 6px;
+  padding-left: 2px;
 }
 
 .comments {
