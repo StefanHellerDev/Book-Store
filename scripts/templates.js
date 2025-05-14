@@ -40,30 +40,13 @@ function bookTemplate(bookstore, bookIndex, bookPrice) {
               <img src="./assets/icons/115704_paperplane_paper plane_icon.png" alt="paper plane"  onclick="addComment(${bookIndex})">
             </div>
           </div>`;
-
-  if (books[bookIndex].liked == true) {
-    filledHeart(bookIndex);
-  } else {
-    unfilledHeart(bookIndex);
-  }
-  commentsTemplate(bookIndex);
 }
 
-function commentsTemplate(bookIndex) {
-    let comments = document.getElementById("bookComments" + bookIndex);
-    comments.innerHTML = "";
-  
-    for (
-      let commentsIndex = 0;
-      commentsIndex < books[bookIndex].comments.length;
-      commentsIndex++
-    ) {
-      comments.innerHTML += `
+function commentsTemplate(comments, bookIndex, commentsIndex) {
+  comments.innerHTML += `
       <tr>
         <td>[${books[bookIndex].comments[commentsIndex].name}]</td>
         <td>:</td>
         <td>${books[bookIndex].comments[commentsIndex].comment}</td>
       </tr>`;
-    }
-  }
-  
+}

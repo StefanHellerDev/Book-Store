@@ -3,6 +3,7 @@ body {
   color: whitesmoke;
   background-color: black;
   overflow: hidden;
+  font-size: 18px;
 }
 
 header {
@@ -55,9 +56,9 @@ footer {
   border-radius: 16px;
   padding-top: 10px;
   padding-bottom: 10px;
-  margin-top: 8px;
-  margin-bottom: 8px;
-  width: 240px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  width: 344px;
 }
 
 .bookCardTitle {
@@ -82,24 +83,24 @@ footer {
 .priceLikesContainer {
   display: flex;
   justify-content: space-between;
-  padding: 10px;  
+  padding: 10px;
 }
 
 .bookPrice {
   color: red;
   font-weight: bold;
+  font-size: 20px;
 }
+
 .priceLikesContainer img {
   height: 24px;
 }
 
 .priceLikesContainer p {
-  font-size: 12px;
   padding-right: 8px;
 }
 
 .authorYearGenreContainer {
-  font-size: 12px;
   padding-left: 10px;
   padding-right: 10px;
   border-bottom: solid;
@@ -109,33 +110,52 @@ footer {
 
 .commentSection {
   font-weight: bold;
-  font-size: 14px;
   padding: 10px;
 }
 
 .commentSection input {
   margin-top: 8px;
   width: 88%;
-  font-size: 12px;
+  font-size: 16px;
   border-bottom: solid;
   border-bottom-color: rgb(107, 116, 241);
 }
 
 .commentSection img {
-  height: 14px;
+  height: 20px;
   filter: invert(100%);
-  margin-top: 6px;
-  padding-left: 2px;
+  margin-top: 8px;
+  padding-left: 8px;
 }
 
 .comments {
   width: 100%;
-  height: 100px;
-  font-size: 10px;
+  height: 136px;
+  font-size: 16px;
   font-weight: 400;
   overflow: auto;
 }
 
 .comments td {
   vertical-align: top;
+}
+
+@media (max-width: 360px) {
+  body {
+    font-size: 16px;
+  }
+
+  .bookCard {
+    width: 304px;
+  }
+
+  .bookPrice {
+    font-size: 18px;
+  }
+
+  .commentSection img {
+    height: 18px;
+    margin-top: 6px;
+    padding-left: 6px;
+  }
 }

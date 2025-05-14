@@ -4,8 +4,17 @@ function init() {
     let bookPrice = books[bookIndex].price.toFixed(2);
     bookPrice = bookPrice.replace(".", ",");
     bookPrice = bookPrice + " €";
-
     bookTemplate(bookstore, bookIndex, bookPrice);
+    showHearts(bookIndex);
+    showComments(bookIndex);
+  }
+}
+
+function showHearts(bookIndex) {
+  if (books[bookIndex].liked == true) {
+    filledHeart(bookIndex);
+  } else {
+    unfilledHeart(bookIndex);
   }
 }
 
@@ -37,20 +46,28 @@ function toggleHeart(bookIndex) {
     books[bookIndex].likes;
 }
 
+function showComments(bookIndex) {
+  let comments = document.getElementById("bookComments" + bookIndex);
+  comments.innerHTML = "";
+  for (
+    let commentsIndex = 0;
+    commentsIndex < books[bookIndex].comments.length;
+    commentsIndex++
+  ) {
+    commentsTemplate(comments, bookIndex, commentsIndex);
+  }
+}
+
 function addComment(bookIndex) {
   let commentInputRef = document.getElementById("commentInput" + bookIndex);
   let commentInput = commentInputRef.value;
-  
   if (commentInput == "") {
     return;
   }
-
   books[bookIndex].comments.unshift({
     "name": "Gast",
     "comment": commentInput,
   });
-
-  commentsTemplate(bookIndex);
-  
+  showComments(bookIndex);
   commentInputRef.value = "";
 }
